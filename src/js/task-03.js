@@ -13,6 +13,16 @@ const images = [
   },
 ];
 
+const galleryList = document.querySelector(".gallery");
+const galleryMarkup = images
+  .map(
+    (image) =>
+      `<li class="gallery__item"><img class="gallery__image" src="${image.url}" alt="${image.alt}"></li>`
+  )
+  .join("");
+
+galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
+
 // Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
 
 // <ul class="gallery"></ul>
